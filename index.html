@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Words</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="cursor"></div>
+    <div class="wrapper">
+        <ul class='tags-cloud'>
+            <li class='tag'><p id="word1" class='wrap'></p></li>
+            <li class='tag'><span class='wrap'>Money</span></li>
+            <li class='tag'><span class='wrap'>Haffi</span></li>
+            <li class='tag'><span class='wrap'>Mek</span></li>
+            <li class='tag'><span class='wrap'>Money</span></li>
+            <li class='tag'><span class='wrap'>Haffi</span></li>
+            <li class='tag'><span class='wrap'>Mek</span></li>
+            <li class='tag'><span class='wrap'>Money</span></li>
+            <li class='tag'><span class='wrap'>Haffi</span></li>
+            <li class='tag'><span class='wrap'>Mek</span></li>
+            <li class='tag'><span class='wrap'>Money</span></li>
+            <li class='tag'><span class='wrap'>Haffi</span></li>
+            <li class='tag'><span class='wrap'>Mek</span></li>
+            <li class='tag'><span class='wrap'>Money</span></li>
+            <li class='tag'><span class='wrap'>Haffi</span></li>
+            <li class='tag'><span class='wrap'>Mek</span></li>
+            
+          
+        </ul>
+    </div>
+    <div class="change"><a class="" href="form.html">Change Words</a></div>
+
+    <script>
+        var btn = document.getElementById('btn1');
+        if(btn){
+            btn.addEventListener('click', populate);
+        }
+        
+    </script>
+
+</body>
+</html>

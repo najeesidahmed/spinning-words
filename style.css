@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+    color: #0a213f;
+    cursor: none;
+}
+
+#cursor {
+    position: fixed;
+    top: -16px;
+    left: -16px;
+    z-index: 1;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #e0e1dd;
+    opacity: 0;
+}
+
+#cursor.-activated {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.tags-cloud {
+    position: fixed;
+    top: calc(50% - 30vmin);
+    left: calc(50% - 30vmin);
+    height: 60vmin;
+    width: 60vmin;
+    list-style: none;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.tags-cloud.-loaded {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.tags-cloud > .tag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5vmin;
+    font-weight: bold;
+    transition: transform .5s linear, opacity .5s linear;
+}
+
+.tags-cloud > .tag > .wrap {
+    display: inline-block;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.wrapper{
+    z-index: -1;
+    position: absolute;
+}
+h1{
+    position: absolute;
+}
+.change{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.change a{
+    text-decoration: underline;
+    color: white;
+}
+.change a:hover{
+    color: #ccc;
+}
+/*------ form page -----*/
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    text-align: center;
+}
+.form-container button{
+    padding: 5px 20px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px black solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.5s;
+    border-radius: 5px;
+}
+.form-container button:hover{
+    transform: scale(1.1);
+}
+.form-container button a{
+    text-decoration: none;
+    color: black;
+}
+.form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+input{
+   margin: 5px;
+}
